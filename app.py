@@ -10,6 +10,8 @@ from flask import Flask, request, jsonify
 # This is the core of our REST API
 app = Flask(__name__)
 
+app.method_does_not_exist = "This will cause an AttributeError to demonstrate error handling"
+
 # In-memory data storage (simple database alternative)
 # In production, you would use a real database like PostgreSQL or MongoDB
 tasks = [
@@ -36,8 +38,8 @@ def get_all_tasks():
     Get all tasks.
     Returns a JSON list of all tasks stored in memory.
     """
-    
-    print(undefined_variable)  # This will cause a NameError to demonstrate error handling
+
+    #print(undefined_variable)  # This will cause a NameError to demonstrate error handling
 
     return jsonify(tasks), 200
 
