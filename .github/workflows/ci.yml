@@ -40,14 +40,14 @@ jobs:
 
       - name: Verify Flask app starts
         run: |
-          timeout 5 python -c "
-          from app import app
-          with app.test_client() as client:
-              response = client.get('/tasks')
-              assert response.status_code == 200
-              print('✓ Flask app running successfully')
-              print('✓ GET /tasks endpoint working')
-          " || true
+          python -c "
+from app import app
+with app.test_client() as client:
+    response = client.get('/tasks')
+    assert response.status_code == 200
+    print('✓ Flask app running successfully')
+    print('✓ GET /tasks endpoint working')
+          "
 
       - name: Run syntax check
         run: python -m py_compile app.py

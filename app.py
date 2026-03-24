@@ -10,8 +10,7 @@ from flask import Flask, request, jsonify
 # This is the core of our REST API
 app = Flask(__name__)
 
-# Force immediate failure on import
-raise Exception("Intentional error to test CI/CD!")
+app.method_does_not_exist()  # This will cause an AttributeError to demonstrate error handling
 
 # In-memory data storage (simple database alternative)
 # In production, you would use a real database like PostgreSQL or MongoDB
