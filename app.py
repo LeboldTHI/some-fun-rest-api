@@ -30,7 +30,7 @@ next_task_id = 6
 # Method: GET
 # Response: List of all tasks
 # ============================================================================
-@app.route("/tasks", methods=["GET"])
+@app.route("/tasks", methods=["GE"])
 def get_all_tasks():
     """
     Get all tasks.
