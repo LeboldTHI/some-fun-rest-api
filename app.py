@@ -5,6 +5,7 @@ It demonstrates the four main HTTP methods: GET, POST, PUT, and DELETE.
 """
 
 from flask import Flask, request, jsonify
+import os 
 
 # Create a Flask application
 # This is the core of our REST API
@@ -30,7 +31,7 @@ next_task_id = 6
 # Method: GET
 # Response: List of all tasks
 # ============================================================================
-@app.route("/tasks", methods=["GE"])
+@app.route("/tasks", methods=["GET"])
 def get_all_tasks():
     """
     Get all tasks.
