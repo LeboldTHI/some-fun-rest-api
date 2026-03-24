@@ -41,12 +41,12 @@ jobs:
       - name: Verify Flask app starts
         run: |
           python -c "
-from app import app
-with app.test_client() as client:
-    response = client.get('/tasks')
-    assert response.status_code == 200
-    print('✓ Flask app running successfully')
-    print('✓ GET /tasks endpoint working')
+          from app import app
+          with app.test_client() as client:
+              response = client.get('/tasks')
+              assert response.status_code == 200
+              print('✓ Flask app running successfully')
+              print('✓ GET /tasks endpoint working')
           "
 
       - name: Run syntax check
