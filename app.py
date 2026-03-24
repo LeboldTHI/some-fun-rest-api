@@ -5,7 +5,7 @@ It demonstrates the four main HTTP methods: GET, POST, PUT, and DELETE.
 """
 
 from flask import Flask, request, jsonify
-import os 
+import non_existent_module  # This will cause an ImportError to demonstrate error handling 
 
 # Create a Flask application
 # This is the core of our REST API
