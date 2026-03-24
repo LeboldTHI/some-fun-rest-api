@@ -16,10 +16,12 @@ tasks = [
     {"id": 1, "title": "Learn Python", "completed": False},
     {"id": 2, "title": "Build a REST API", "completed": False},
     {"id": 3, "title": "Test with Postman", "completed": False},
+    {"id": 4, "title": "Deploy the API", "completed": False},
+    {"id": 5, "title": "Write documentation", "completed": False},
 ]
 
 # Counter for generating unique task IDs
-next_task_id = 4
+next_task_id = 6
 
 
 # ============================================================================
