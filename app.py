@@ -158,8 +158,6 @@ def delete_task(task_id):
     2. URL: http://localhost:5000/tasks/1
     3. Send the request
     """
-    global tasks
-
     # Find the index of the task
     task_index = next((i for i, t in enumerate(tasks) if t["id"] == task_id), None)
 
