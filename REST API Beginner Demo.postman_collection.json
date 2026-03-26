@@ -1,9 +1,11 @@
 {
   "info": {
-    "_postman_id": "rest-api-beginner-collection",
+    "_postman_id": "b193eea4-589d-47cd-a576-8345eba17acd",
     "name": "REST API Beginner Demo",
     "description": "A complete collection for testing the REST API beginner demo. This collection includes all CRUD operations with example requests and test data.",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53467951",
+    "_collection_link": "https://go.postman.co/collection/53467951-b193eea4-589d-47cd-a576-8345eba17acd?source=collection_link"
   },
   "item": [
     {
@@ -15,11 +17,14 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:5000/",
+              "raw": "http://{{host}}/",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": [""]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                ""
+              ]
             },
             "description": "Check if the API is running. Returns a welcome message."
           },
@@ -32,14 +37,20 @@
                 "url": {
                   "raw": "http://localhost:5000/",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "5000",
-                  "path": [""]
+                  "path": [
+                    ""
+                  ]
                 }
               },
               "status": "OK",
               "code": 200,
+              "_postman_previewlanguage": "Text",
               "header": [],
+              "cookie": [],
               "body": "{\"message\": \"Welcome to the REST API! Visit /tasks to get started.\"}"
             }
           ]
@@ -55,11 +66,14 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:5000/tasks",
+              "raw": "http://{{host}}/tasks",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks"
+              ]
             },
             "description": "Retrieve all tasks from the API. This is a simple GET request that returns a JSON array of all tasks."
           },
@@ -72,14 +86,20 @@
                 "url": {
                   "raw": "http://localhost:5000/tasks",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "5000",
-                  "path": ["tasks"]
+                  "path": [
+                    "tasks"
+                  ]
                 }
               },
               "status": "OK",
               "code": 200,
+              "_postman_previewlanguage": "Text",
               "header": [],
+              "cookie": [],
               "body": "[\n  {\n    \"id\": 1,\n    \"title\": \"Learn Python\",\n    \"completed\": false\n  },\n  {\n    \"id\": 2,\n    \"title\": \"Build a REST API\",\n    \"completed\": false\n  },\n  {\n    \"id\": 3,\n    \"title\": \"Test with Postman\",\n    \"completed\": false\n  }\n]"
             }
           ]
@@ -90,11 +110,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:5000/tasks/1",
+              "raw": "http://{{host}}/tasks/1",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks", "1"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks",
+                "1"
+              ]
             },
             "description": "Retrieve a single task by its ID. Replace '1' with any task ID (1, 2, or 3 to start)."
           },
@@ -107,14 +131,21 @@
                 "url": {
                   "raw": "http://localhost:5000/tasks/1",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "5000",
-                  "path": ["tasks", "1"]
+                  "path": [
+                    "tasks",
+                    "1"
+                  ]
                 }
               },
               "status": "OK",
               "code": 200,
+              "_postman_previewlanguage": "Text",
               "header": [],
+              "cookie": [],
               "body": "{\n  \"id\": 1,\n  \"title\": \"Learn Python\",\n  \"completed\": false\n}"
             },
             {
@@ -125,14 +156,21 @@
                 "url": {
                   "raw": "http://localhost:5000/tasks/999",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "5000",
-                  "path": ["tasks", "999"]
+                  "path": [
+                    "tasks",
+                    "999"
+                  ]
                 }
               },
               "status": "Not Found",
               "code": 404,
+              "_postman_previewlanguage": "Text",
               "header": [],
+              "cookie": [],
               "body": "{\n  \"error\": \"Task not found\"\n}"
             }
           ]
@@ -158,11 +196,14 @@
               "raw": "{\n  \"title\": \"Buy groceries\"\n}"
             },
             "url": {
-              "raw": "http://localhost:5000/tasks",
+              "raw": "http://{{host}}/tasks",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks"
+              ]
             },
             "description": "Create a new task. The API will automatically assign an ID. Only 'title' is required."
           },
@@ -185,14 +226,20 @@
                 "url": {
                   "raw": "http://localhost:5000/tasks",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "5000",
-                  "path": ["tasks"]
+                  "path": [
+                    "tasks"
+                  ]
                 }
               },
               "status": "Created",
               "code": 201,
+              "_postman_previewlanguage": "Text",
               "header": [],
+              "cookie": [],
               "body": "{\n  \"id\": 4,\n  \"title\": \"Buy groceries\",\n  \"completed\": false\n}"
             }
           ]
@@ -213,11 +260,14 @@
               "raw": "{\n  \"title\": \"Call mom\"\n}"
             },
             "url": {
-              "raw": "http://localhost:5000/tasks",
+              "raw": "http://{{host}}/tasks",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks"
+              ]
             },
             "description": "Create another test task. Try this one to add variety to your task list."
           },
@@ -240,14 +290,20 @@
                 "url": {
                   "raw": "http://localhost:5000/tasks",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "5000",
-                  "path": ["tasks"]
+                  "path": [
+                    "tasks"
+                  ]
                 }
               },
               "status": "Created",
               "code": 201,
+              "_postman_previewlanguage": "Text",
               "header": [],
+              "cookie": [],
               "body": "{\n  \"id\": 5,\n  \"title\": \"Call mom\",\n  \"completed\": false\n}"
             }
           ]
@@ -268,11 +324,14 @@
               "raw": "{\n  \"title\": \"Read a book\"\n}"
             },
             "url": {
-              "raw": "http://localhost:5000/tasks",
+              "raw": "http://{{host}}/tasks",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks"
+              ]
             },
             "description": "Create another test task with different content."
           },
@@ -295,14 +354,20 @@
                 "url": {
                   "raw": "http://localhost:5000/tasks",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "5000",
-                  "path": ["tasks"]
+                  "path": [
+                    "tasks"
+                  ]
                 }
               },
               "status": "Created",
               "code": 201,
+              "_postman_previewlanguage": "Text",
               "header": [],
+              "cookie": [],
               "body": "{\n  \"id\": 6,\n  \"title\": \"Read a book\",\n  \"completed\": false\n}"
             }
           ]
@@ -323,11 +388,14 @@
               "raw": "{\n}"
             },
             "url": {
-              "raw": "http://localhost:5000/tasks",
+              "raw": "http://{{host}}/tasks",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks"
+              ]
             },
             "description": "Test error handling. This should fail because 'title' is required. Observe the 400 error response."
           },
@@ -350,14 +418,20 @@
                 "url": {
                   "raw": "http://localhost:5000/tasks",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "5000",
-                  "path": ["tasks"]
+                  "path": [
+                    "tasks"
+                  ]
                 }
               },
               "status": "Bad Request",
               "code": 400,
+              "_postman_previewlanguage": "Text",
               "header": [],
+              "cookie": [],
               "body": "{\n  \"error\": \"Missing 'title' field\"\n}"
             }
           ]
@@ -383,11 +457,15 @@
               "raw": "{\n  \"completed\": true\n}"
             },
             "url": {
-              "raw": "http://localhost:5000/tasks/1",
+              "raw": "http://{{host}}/tasks/1",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks", "1"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks",
+                "1"
+              ]
             },
             "description": "Update a task to mark it as complete. Change the ID in the URL to update different tasks."
           },
@@ -410,14 +488,21 @@
                 "url": {
                   "raw": "http://localhost:5000/tasks/1",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "5000",
-                  "path": ["tasks", "1"]
+                  "path": [
+                    "tasks",
+                    "1"
+                  ]
                 }
               },
               "status": "OK",
               "code": 200,
+              "_postman_previewlanguage": "Text",
               "header": [],
+              "cookie": [],
               "body": "{\n  \"id\": 1,\n  \"title\": \"Learn Python\",\n  \"completed\": true\n}"
             }
           ]
@@ -438,11 +523,15 @@
               "raw": "{\n  \"title\": \"Learn Python - Advanced Topics\"\n}"
             },
             "url": {
-              "raw": "http://localhost:5000/tasks/2",
+              "raw": "http://{{host}}/tasks/2",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks", "2"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks",
+                "2"
+              ]
             },
             "description": "Update only the title of a task. Leave 'completed' as is since we didn't include it."
           },
@@ -465,14 +554,21 @@
                 "url": {
                   "raw": "http://localhost:5000/tasks/2",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "5000",
-                  "path": ["tasks", "2"]
+                  "path": [
+                    "tasks",
+                    "2"
+                  ]
                 }
               },
               "status": "OK",
               "code": 200,
+              "_postman_previewlanguage": "Text",
               "header": [],
+              "cookie": [],
               "body": "{\n  \"id\": 2,\n  \"title\": \"Learn Python - Advanced Topics\",\n  \"completed\": false\n}"
             }
           ]
@@ -493,11 +589,15 @@
               "raw": "{\n  \"title\": \"Completed: Build a REST API\",\n  \"completed\": true\n}"
             },
             "url": {
-              "raw": "http://localhost:5000/tasks/3",
+              "raw": "http://{{host}}/tasks/3",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks", "3"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks",
+                "3"
+              ]
             },
             "description": "Update multiple fields at once. This updates both the title and marks the task as completed."
           },
@@ -520,14 +620,21 @@
                 "url": {
                   "raw": "http://localhost:5000/tasks/3",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "5000",
-                  "path": ["tasks", "3"]
+                  "path": [
+                    "tasks",
+                    "3"
+                  ]
                 }
               },
               "status": "OK",
               "code": 200,
+              "_postman_previewlanguage": "Text",
               "header": [],
+              "cookie": [],
               "body": "{\n  \"id\": 3,\n  \"title\": \"Completed: Build a REST API\",\n  \"completed\": true\n}"
             }
           ]
@@ -548,11 +655,15 @@
               "raw": "{\n  \"completed\": true\n}"
             },
             "url": {
-              "raw": "http://localhost:5000/tasks/999",
+              "raw": "http://{{host}}/tasks/999",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks", "999"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks",
+                "999"
+              ]
             },
             "description": "Test error handling. Trying to update a task that doesn't exist will return a 404 error."
           },
@@ -575,14 +686,21 @@
                 "url": {
                   "raw": "http://localhost:5000/tasks/999",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "5000",
-                  "path": ["tasks", "999"]
+                  "path": [
+                    "tasks",
+                    "999"
+                  ]
                 }
               },
               "status": "Not Found",
               "code": 404,
+              "_postman_previewlanguage": "Text",
               "header": [],
+              "cookie": [],
               "body": "{\n  \"error\": \"Task not found\"\n}"
             }
           ]
@@ -598,11 +716,15 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:5000/tasks/1",
+              "raw": "http://{{host}}/tasks/3",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks", "1"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks",
+                "3"
+              ]
             },
             "description": "Delete a task by ID. After deletion, you won't be able to retrieve or update it anymore."
           },
@@ -615,14 +737,21 @@
                 "url": {
                   "raw": "http://localhost:5000/tasks/1",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "5000",
-                  "path": ["tasks", "1"]
+                  "path": [
+                    "tasks",
+                    "1"
+                  ]
                 }
               },
               "status": "OK",
               "code": 200,
+              "_postman_previewlanguage": "Text",
               "header": [],
+              "cookie": [],
               "body": "{\n  \"message\": \"Task deleted\",\n  \"task\": {\n    \"id\": 1,\n    \"title\": \"Learn Python\",\n    \"completed\": true\n  }\n}"
             }
           ]
@@ -633,11 +762,15 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:5000/tasks/2",
+              "raw": "http://{{host}}/tasks/2",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks", "2"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks",
+                "2"
+              ]
             },
             "description": "Delete another task. Change the ID to delete different tasks."
           },
@@ -650,14 +783,21 @@
                 "url": {
                   "raw": "http://localhost:5000/tasks/2",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "5000",
-                  "path": ["tasks", "2"]
+                  "path": [
+                    "tasks",
+                    "2"
+                  ]
                 }
               },
               "status": "OK",
               "code": 200,
+              "_postman_previewlanguage": "Text",
               "header": [],
+              "cookie": [],
               "body": "{\n  \"message\": \"Task deleted\",\n  \"task\": {\n    \"id\": 2,\n    \"title\": \"Build a REST API\",\n    \"completed\": false\n  }\n}"
             }
           ]
@@ -668,11 +808,15 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:5000/tasks/999",
+              "raw": "http://{{host}}/tasks/999",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks", "999"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks",
+                "999"
+              ]
             },
             "description": "Test error handling. Trying to delete a task that doesn't exist returns a 404 error."
           },
@@ -685,14 +829,21 @@
                 "url": {
                   "raw": "http://localhost:5000/tasks/999",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "5000",
-                  "path": ["tasks", "999"]
+                  "path": [
+                    "tasks",
+                    "999"
+                  ]
                 }
               },
               "status": "Not Found",
               "code": 404,
+              "_postman_previewlanguage": "Text",
               "header": [],
+              "cookie": [],
               "body": "{\n  \"error\": \"Task not found\"\n}"
             }
           ]
@@ -701,7 +852,6 @@
     },
     {
       "name": "Practice Workflow",
-      "description": "Follow these requests in order to practice a complete CRUD workflow",
       "item": [
         {
           "name": "Step 1 - Check All Tasks",
@@ -709,14 +859,18 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:5000/tasks",
+              "raw": "http://{{host}}/tasks",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks"
+              ]
             },
             "description": "Start here: View all existing tasks"
-          }
+          },
+          "response": []
         },
         {
           "name": "Step 2 - Add Your First Task",
@@ -734,14 +888,18 @@
               "raw": "{\n  \"title\": \"My First Task\"\n}"
             },
             "url": {
-              "raw": "http://localhost:5000/tasks",
+              "raw": "http://{{host}}/tasks",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks"
+              ]
             },
             "description": "Create a new task. Take note of the ID returned!"
-          }
+          },
+          "response": []
         },
         {
           "name": "Step 3 - Get Your New Task",
@@ -749,14 +907,19 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:5000/tasks/4",
+              "raw": "http://{{host}}/tasks/4",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks", "4"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks",
+                "4"
+              ]
             },
             "description": "Retrieve the task you just created. Update '4' to the ID from Step 2 if different."
-          }
+          },
+          "response": []
         },
         {
           "name": "Step 4 - Update Your Task",
@@ -774,14 +937,19 @@
               "raw": "{\n  \"title\": \"My First Task - Updated\",\n  \"completed\": true\n}"
             },
             "url": {
-              "raw": "http://localhost:5000/tasks/4",
+              "raw": "http://{{host}}/tasks/4",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks", "4"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks",
+                "4"
+              ]
             },
             "description": "Update the task. Use the ID from Step 2."
-          }
+          },
+          "response": []
         },
         {
           "name": "Step 5 - View All Tasks Again",
@@ -789,14 +957,18 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:5000/tasks",
+              "raw": "http://{{host}}/tasks",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks"
+              ]
             },
             "description": "See all tasks including your updates"
-          }
+          },
+          "response": []
         },
         {
           "name": "Step 6 - Delete Your Task",
@@ -804,14 +976,19 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:5000/tasks/4",
+              "raw": "http://{{host}}/tasks/4",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks", "4"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks",
+                "4"
+              ]
             },
             "description": "Delete the task you created. Use the ID from Step 2."
-          }
+          },
+          "response": []
         },
         {
           "name": "Step 7 - Verify Deletion",
@@ -819,16 +996,27 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:5000/tasks",
+              "raw": "http://{{host}}/tasks",
               "protocol": "http",
-              "host": ["localhost"],
-              "port": "5000",
-              "path": ["tasks"]
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "tasks"
+              ]
             },
             "description": "Confirm the task is gone. The task should no longer appear in the list."
-          }
+          },
+          "response": []
         }
-      ]
+      ],
+      "description": "Follow these requests in order to practice a complete CRUD workflow"
+    }
+  ],
+  "variable": [
+    {
+      "key": "host",
+      "value": ""
     }
   ]
 }
