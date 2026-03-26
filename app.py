@@ -188,7 +188,7 @@ def home():
     """
     Welcome endpoint to verify the API is running.
     """
-    return jsonify({"message": "Welcome to the REST API! Visit /tasks to get started."}), 200
+    return jsonify({"message": "Willkommen Studierende! Besucht /tasks um loszulegen."}), 200
 
 
 # ============================================================================
