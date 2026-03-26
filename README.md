@@ -63,14 +63,14 @@ python app.py
 
 You should see:
 ```
- * Running on http://localhost:5000
+ * Running on http://localhost:5001
  * Debug mode: on
 ```
 
 #### Step 5: Test in Postman or Browser
 
 1. Open Postman or your browser
-2. Go to `http://localhost:5000/`
+2. Go to `http://localhost:5001/`
 3. You should see: `{"message": "Welcome to the REST API! Visit /tasks to get started."}`
 
 #### Step 6: Stop the Server
