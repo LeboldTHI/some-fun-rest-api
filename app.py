@@ -21,11 +21,11 @@ tasks = [
     {"id": 3, "title": "Test with Postman", "completed": False},
     {"id": 4, "title": "Deploy the API", "completed": False},
     {"id": 5, "title": "Write documentation", "completed": False},
+    {"id": 6, "title": "Für Prüfung lernen", "completed": False},
 ]
 
 # Counter for generating unique task IDs
-next_task_id = 6
-
+next_task_id = 7
 
 # ============================================================================
 # ROUTE 1: GET - Retrieve all tasks
