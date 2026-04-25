@@ -25,7 +25,7 @@ tasks = [
 ]
 
 # Counter for generating unique task IDs
-next_task_id = 7
+next_task_id = 8
 
 # ============================================================================
 # ROUTE 1: GET - Retrieve all tasks
